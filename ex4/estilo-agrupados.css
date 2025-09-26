@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+body {
+    font-family: sans-serif;
+}
+
+.soPequeno {
+    display: block;
+}
+
+.soMedio {
+    display: none;
+}
+
+.soGrande {
+    display: none;
+}
+
+article {
+    width: 90%;
+}
+
+article img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+@media screen and (min-width: 420px) {
+    .soPequeno {
+        display: none;
+    }
+
+    .soMedio {
+        display: block;
+    }
+
+    .soGrande {
+        display: none;
+    }
+
+    article {
+        width: 44.9%;
+        float: left;
+        margin: auto 2.5%;
+        padding-bottom: 30px;
+    }
+
+    article:last-of-type {
+        width: 94.9%;
+        float: none;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    body {
+        width: 90%;
+        max-width: 1800px;
+        margin: auto;
+    }
+
+    .soPequeno {
+        display: none;
+    }
+
+    .soMedio {
+        display: none;
+    }
+
+    .soGrande {
+        display: block;
+    }
+
+    /* Caixas*/
+    article,
+    article:last-of-type {
+        width: 30.3%;
+        float: left;
+        margin: auto 1.5%;
+        padding-bottom: 30px;
+    }
+
+    article:last-of-type {
+        margin-bottom: 21.5%;
+    }
+}

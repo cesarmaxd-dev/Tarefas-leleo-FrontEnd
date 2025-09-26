@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* Corpo do texto */
+body {
+    font-family: sans-serif;
+}
+
+/* Cabeçalho */
+
+.soPequeno {
+    display: none;
+}
+
+.soMedio {
+    display: none;
+}
+
+.soGrande {
+    display: block;
+}
+
+article,
+article:last-of-type {
+    width: 30%;
+    float: left;
+    margin: auto 1.5%;
+    padding-bottom: 30px;
+}
+
+article:last-of-type img {
+    margin-bottom: 21.5%;
+}

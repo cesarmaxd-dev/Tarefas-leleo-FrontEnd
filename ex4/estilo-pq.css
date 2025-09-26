@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* Corpo do texto */
+body {
+    font-family: sans-serif;
+}
+
+/* Cabeçalho */
+
+.soPequeno {
+    display: block;
+}
+
+.soMedio {
+    display: none;
+}
+
+.soGrande {
+    display: none;
+}
+
+article {
+    width: 90%;
+    float: none;
+    margin: auto;
+}
+
+/* Imagem */
+article img {
+    max-width: 100%;
+}
+
+/* Corpo do texto */
+p {
+    font-size: 1.2em;
+}
