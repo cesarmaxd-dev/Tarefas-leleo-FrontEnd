@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacao 01</title>
+
+ 
+</html><!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacao 01</title>
+    <style>
+        .caixa {
+            background-color: #fff;
+            width: 150px;
+            padding: 30px;
+            border: solid thin #ccc;
+        }
+ 
+        /*Animação - Webkit!!!*/
+        @-webkit-keyframes anime {
+            from {
+                width: 150px;
+                background: #fff;
+            }
+ 
+            to {
+                width: 400px;
+                background: #58a326;
+            }
+        }
+ 
+        .animeGO {
+            -webkit-animation-name: anime;
+            -webkit-animation-duration: 3s;
+            /*tempo de delay*/
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-delay: 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-play-state: running;
+        }
+ 
+        /*animação padrão*/
+        @keyframes anime {
+            from {
+                width: 150px;
+                background: #fff;
+            }
+ 
+            to {
+                width: 400px;
+                background: #238c31;
+            }
+        }
+ 
+        .animeGO {
+            animation-name: anime;
+            animation-duration: 1ms;
+            animation-timing-function: ease;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running;
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <h1>Transições</h1>
+    <h2>Animação 01</h2>
+    <div class="caixa">Avai</div>
+    <div class="caixa animeGO">Coxa</div>
+</body>
+ 
+</html>
