@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação 02</title>
+</head>
+<style>
+  .caixa{
+            background-color: #FFF;
+            width: 250px;
+            height: 200px;
+            display: table;
+            text-align: center;
+            padding: 0 25px;
+            position: absolute;
+            border: solid thin #ccc;
+        }
+            .caixa p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+     .animeGO{
+            background-color: #fff;
+            width: 150px;
+            padding: 30px;
+            border: solid thin #ccc;
+
+    }
+    /*animação - webkit*/
+    @-webkit-keyframes anime {
+        .0% {
+            background: #fff;
+            opacity: 0;
+        }
+        40% {
+            background: #fff;
+            opacity: 0;
+        }
+        50% {
+            background-color: #d83061;
+            opacity: 1;
+        }
+        90% {
+            background-color: #d83061d8;
+        }
+        100% {
+            background: #fff;
+            opacity: 0;
+        }
+    }
+    .animeGO {
+        -webkit-animation: anime 3s ease .5s infinite alternate running;
+    }
+    /*animação padrão */
+    @-webkit-keyframes anime {
+        .0% {
+            background: #fff;
+            opacity: 0;
+        }
+        40% {
+            background: #fff;
+            opacity: 0;
+        }
+        50% {
+            background-color: #d83061;
+            opacity: 1;
+        }
+        90% {
+            background-color: #d83061d8;
+        }
+        100% {
+            background: #fff;
+            opacity: 0;
+        }
+           }
+    .animeGO {
+        -webkit-animation: anime 3s ease .5s infinite alternate running;
+    }
+</style>
+<body>
+    <h1>Transições de animações</h1>
+    <h2>Animação 02</h2>
+    <div class="caixa">1#Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque corrupti inventore error ex
+        ad, quas
+        nesciunt! Iste dolores ullam, voluptate dolor dolorem magni sequi animi. Dolores totam illo perspiciatis!</div>
+<div class=" caixa animeGO"> 2#Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque corrupti inventore
+        error ex ad, quas
+        nesciunt! Iste dolores ullam, voluptate dolor dolorem magni sequi animi. Dolores totam illo perspiciatis!</div>
+</body>
+</html>
