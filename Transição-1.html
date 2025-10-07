@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trançisão</title>
+</head>
+<style>
+.caixa{
+    background-color: #fff;
+    width: 150px;
+    padding: 30px;
+    border: solid thin #ccc;
+    transition-property: width;
+    transition-duration: 3s;
+    transition-timing-function: cubic-bezier(.42, 0 , 58, 1);
+}
+.caixa:hover {
+    background-color: #8c232c;
+    width: 400px;
+}
+</style>
+<body>
+    <h1>Transições e animações</h1>
+    <h2>Transição 01</h2>
+    <div class="caixa">Conteúdo inicial</div>
+    <div class="caixa">Conteúdo Hover</div>
+</body>
+
+</html>
