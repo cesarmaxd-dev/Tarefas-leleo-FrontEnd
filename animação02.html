@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animação 02</title>
-</head>
-<style>
-  .caixa{
+    <title>Animacao 2</title>
+    <style>
+        .caixa{
             background-color: #FFF;
             width: 250px;
             height: 200px;
@@ -16,77 +15,82 @@
             position: absolute;
             border: solid thin #ccc;
         }
-            .caixa p{
+        .caixa p{
             display: table-cell;
             vertical-align: middle;
         }
-
-     .animeGO{
-            background-color: #fff;
-            width: 150px;
-            padding: 30px;
-            border: solid thin #ccc;
-
-    }
-    /*animação - webkit*/
-    @-webkit-keyframes anime {
-        .0% {
-            background: #fff;
-            opacity: 0;
+        /* Animação - WebKit */
+        @-webkit-keyframes anime {
+            0%{
+                background: #FFF;
+                opacity: 0;
+            }
+ 
+            40%{
+                background: #FFF;
+                opacity: 0;
+            }  
+            50%{
+                background-color: #d83061;
+                opacity: 1;
+            }
+ 
+            90%{
+                background-color: #d83061;
+                opacity: 1;
+            }
+ 
+            100%{
+                background-color: #FFF;
+                opacity: 0;
+            }
         }
-        40% {
-            background: #fff;
-            opacity: 0;
+        .animeGo{
+            -webkit-animation: anime 3s ease .5s infinite alternate running;
         }
-        50% {
-            background-color: #d83061;
-            opacity: 1;
+        /* Animação PAdrão */
+        @keyframes anime {
+            0%{
+                background: #FFF;
+                opacity: 0;
+            }
+ 
+            40%{
+                background: #FFF;
+                opacity: 0;
+            }  
+            50%{
+                background-color: #d83061;
+                opacity: 1;
+            }
+ 
+            90%{
+                background-color: #d83061;
+                opacity: 1;
+            }
+ 
+            100%{
+                background: #FFF;
+                opacity: 0;
+            }
         }
-        90% {
-            background-color: #d83061d8;
+        .animeGo{
+            animation: anime 3s ease .5s infinite alternate running;
         }
-        100% {
-            background: #fff;
-            opacity: 0;
-        }
-    }
-    .animeGO {
-        -webkit-animation: anime 3s ease .5s infinite alternate running;
-    }
-    /*animação padrão */
-    @-webkit-keyframes anime {
-        .0% {
-            background: #fff;
-            opacity: 0;
-        }
-        40% {
-            background: #fff;
-            opacity: 0;
-        }
-        50% {
-            background-color: #d83061;
-            opacity: 1;
-        }
-        90% {
-            background-color: #d83061d8;
-        }
-        100% {
-            background: #fff;
-            opacity: 0;
-        }
-           }
-    .animeGO {
-        -webkit-animation: anime 3s ease .5s infinite alternate running;
-    }
-</style>
+    </style>
+</head>
+ 
 <body>
-    <h1>Transições de animações</h1>
-    <h2>Animação 02</h2>
-    <div class="caixa">1#Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque corrupti inventore error ex
-        ad, quas
-        nesciunt! Iste dolores ullam, voluptate dolor dolorem magni sequi animi. Dolores totam illo perspiciatis!</div>
-<div class=" caixa animeGO"> 2#Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque corrupti inventore
-        error ex ad, quas
-        nesciunt! Iste dolores ullam, voluptate dolor dolorem magni sequi animi. Dolores totam illo perspiciatis!</div>
+    <h1>Transições e animações</h1>
+    <h2>Animação 2</h2>
+    <div class="caixa">
+        #1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere amet porro quia quam quos dignissimos,
+        soluta nulla doloribus perspiciatis nisi molestias fugit laudantium,
+        magni similique vero nam voluptatem corporis qui.
+    </div>
+   
+    <div class="caixa animeGo">#2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Quidem doloremque sit odit deleniti! Voluptas nulla minus quae a expedita maxime,
+        vel porro. Autem hic sint numquam cum voluptates perferendis et!</div>
 </body>
 </html>
