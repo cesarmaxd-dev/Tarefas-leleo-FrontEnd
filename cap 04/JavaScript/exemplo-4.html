@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="Titulo" onmouseover="mudarCor()" onmouseout="VoltarCor()">Passe o mouse aqui</h2>
+    <script>
+        function mudarCor() {
+            document.getElementById("Titulo").style.color = "green";
+        }
+        function VoltarCor() {
+            document.getElementById("Titulo").style.color = "black";
+        }
+    </script>
+</body>
+
+</html>
