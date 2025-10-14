@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mostrar()">Mostrar Texto</button>
+    <button onclick="esconder()">Esconder Texto</button>
+    <p id="texto" style="display: none;">Esse é um texto escondido!</p>
+
+    <script>
+        function mostrar() {
+            document.getElementById("texto").style.display = "block"
+        }
+        function esconder() {
+            document.getElementById("texto").style.display = "none"
+        }
+    </script>
+</body>
+</html>
