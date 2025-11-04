@@ -18,14 +18,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -2; /* atrás de tudo */
+  z-index: -2;
 }
 
 /* ============================= */
 /* CORPO */
 /* ============================= */
 body {
-  margin: 0;
   color: #222;
   background: transparent;
 }
@@ -33,7 +32,6 @@ body {
 /* ============================= */
 /* CABEÇALHO */
 /* ============================= */
-/* Cabeçalho */
 header {
   position: fixed;
   top: 0;
@@ -43,28 +41,29 @@ header {
   background: rgba(17, 17, 17, 0.9);
   display: flex;
   align-items: center;
+  justify-content: space-between; /* espaça logo e menu/hambúrguer */
   color: white;
   z-index: 10;
 }
 
-/* Logo à esquerda */
+/* Logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 2px;
 }
 
-/* Nav centralizado usando absolute */
+/* Nav centralizado em telas grandes */
 nav {
   position: absolute;
-  left: 50%;            /* posiciona o início do nav no meio da tela */
-  transform: translateX(-50%); /* move metade da largura do nav pra esquerda → centraliza */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 30px; /* espaçamento entre os links */
+  gap: 30px;
 }
 
 nav ul li a {
@@ -79,10 +78,21 @@ nav ul li a:hover {
 }
 
 /* ============================= */
+/* BOTÃO HAMBÚRGUER */
+/* ============================= */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* escondido em telas grandes */
+  color: white;
+  z-index: 15;
+}
+
+/* ============================= */
 /* HERO */
 /* ============================= */
 .hero {
-  height: 100vh; /* ocupa tela toda */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +109,7 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* camada escura */
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -146,7 +156,7 @@ nav ul li a:hover {
   text-align: center;
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.9); /* leve contraste sobre vídeo */
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .produtos h2 {
@@ -186,4 +196,49 @@ nav ul li a:hover {
 .card p {
   font-size: 16px;
   color: #333;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+@media (max-width: 768px) {
+  /* mostra o hambúrguer */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* esconde o nav por padrão */
+  nav {
+    position: fixed;
+    top: 70px;
+    right: -100%; /* escondido à direita */
+    width: 200px;
+    height: auto;
+    background: rgba(17, 17, 17, 0.95);
+    transition: right 0.4s ease;
+    border-radius: 8px 0 0 8px;
+  }
+
+  /* quando ativo, o menu aparece */
+  nav.ativo {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  /* centraliza links no menu suspenso */
+  nav ul li a {
+    display: block;
+    font-size: 18px;
+  }
+
+  /* animação do ícone hambúrguer */
+  .menu-toggle.ativo {
+    color: #aaa;
+  }
 }
