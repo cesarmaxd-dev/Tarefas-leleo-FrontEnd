@@ -93,7 +93,7 @@ function adicionarCarrinho(nome, preco) {
   total += preco;
   atualizarCarrinho();
   abrirCarrinho();
-}
+}0
 
 // Remove um produto do carrinho
 function removerItem(index) {

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stride - Tênis Online</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="icon" type="image/png" href="../Imgens/logo.png">
+</head>
+
+<body> <!-- Vídeo de fundo --> <video autoplay muted loop id="video-fundo">
+    <source src="../Imgens/video_nike.mp4" type="video/mp4">
+  </video> <!-- Cabeçalho -->
+  <header>
+    <div class="logo">STRIDE</div> <!-- Botão hambúrguer (adicionado) -->
+    <div class="menu-toggle" id="menu-toggle"> &#9776; <!-- ícone do hambúrguer --> </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="../Html/colecao.html">Masculino</a></li>
+        <li><a href="../Html/kids.html">Feminino</a></li>
+        <li><a href="../Html/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header> <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Passada firme, estilo único.</h1>
+      <p>Encontre os melhores tênis esportivos e casuais em um só lugar.</p> <a href="../Html/colecao.html"
+        class="botao-explorar">Explorar</a>
+    </div>
+  </section> <!-- Script do menu responsivo -->
+  <script>     // abre/fecha o menu ao clicar no hambúrguer     const menuToggle = document.getElementById('menu-toggle');     const navMenu = document.getElementById('nav-menu');     menuToggle.addEventListener('click', () => {       navMenu.classList.toggle('ativo');       menuToggle.classList.toggle('ativo');     });   </script>
+</body>
+
+</html>
